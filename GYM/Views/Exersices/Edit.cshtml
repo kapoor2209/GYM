@@ -1,0 +1,49 @@
+﻿@model GYM.Models.Exersice
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Exersice</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ExcerciseID" />
+            <div class="form-group">
+                <label asp-for="ExersiceName" class="control-label"></label>
+                <input asp-for="ExersiceName" class="form-control" />
+                <span asp-validation-for="ExersiceName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TimeDuration" class="control-label"></label>
+                <input asp-for="TimeDuration" class="form-control" />
+                <span asp-validation-for="TimeDuration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Advantage" class="control-label"></label>
+                <input asp-for="Advantage" class="form-control" />
+                <span asp-validation-for="Advantage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Disadvantage" class="control-label"></label>
+                <input asp-for="Disadvantage" class="form-control" />
+                <span asp-validation-for="Disadvantage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

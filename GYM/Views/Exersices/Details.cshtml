@@ -1,0 +1,42 @@
+﻿@model GYM.Models.Exersice
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Exersice</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExersiceName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExersiceName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TimeDuration)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TimeDuration)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Advantage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Advantage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Disadvantage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Disadvantage)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ExcerciseID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
